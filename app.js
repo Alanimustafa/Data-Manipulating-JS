@@ -73,6 +73,9 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   //Check if the first number is larger than the last. Cache the result in a variable.
   console.log(`Is ${n1} greater than ${n4}?  Answer: `, n1 > n4);
 
+//Accomplish the following arithmetic chain:
 
+  //Subtract the first number from the second number.
+  console.log(`Subtract ${n1} from ${n2}. The Result Is: `, n2-n1);
 
   
