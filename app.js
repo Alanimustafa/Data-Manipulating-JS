@@ -17,7 +17,7 @@ console.log (`Is the sum of ${n1}, ${n2}, ${n3} and ${n4} equals 50? The answer 
 // Since % 2 is 0 if even and 1 if odd, we can use
 // arithmetic to count the total number of odd numbers.
 const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
-console.log(isTwoOdd);
+console.log(`Is there any Odd number ? The result is: `, isTwoOdd);
 console.log(`Is ${n1} an odd number? `, n1 %2 == 1); 
 console.log(`Is ${n2} an odd number? `, n2 %2 == 1);
 console.log(`Is ${n3} an odd number? `, n3 %2 == 1);
@@ -28,20 +28,9 @@ console.log(`Is ${n4} an odd number? `, n4 %2 == 1);
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
-// const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+console.log('is it over? ',isOver25);
 
-/* The statement above needs to be changed from (OR) to (AND) to 
-    check if All numbers are less than 25 then the result is TRUE. 
-    Otherwise if there any number is over 25 will still result to false 
-    becuase of using the (OR) condition.*/
-const isOver25 = n1 > 25 && n2 > 25 && n3 > 25 && n4 > 25;
-console.log("Is therer any number over than 25? ", isOver25);
-
-//If we need to check each number indiviualy, we type:
-console.log (`Is N1 Greater Than 25? The result is: `, n1 > 25);
-console.log (`Is N2 Greater Than 25? The result is: `, n2 > 25);
-console.log (`Is N3 Greater Than 25? The result is: `, n3 > 25);
-console.log (`Is N4 Greater Than 25? The result is: `, n4 > 25);
 
 
 // Check four: all unique numbers
@@ -50,6 +39,25 @@ console.log (`Is N4 Greater Than 25? The result is: `, n4 > 25);
 // that we will review later.
 const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 
+
+function equalNumbers () {
+    let numbersArray = [n1, n2,n3,n4]
+      for (let index = 0 ; index < numbersArray.length; index++) {
+        if (numbersArray[index] === numbersArray[index+1]) {
+            console.log (`The N${index+1} is matched with N${index+2} and the value is ::::::::::::::::::::`, numbersArray[index]);
+            console.log (`The N${index+2} is matched with N${index+1} and the value is ::::::::::::::::::::`, numbersArray[index]);
+        } else if (numbersArray[index] !== numbersArray[index+1]) {
+          console.log(`N${index+1} HAS NO OTHER DUPLICATES`);
+        }
+      }
+  } 
+
+
+equalNumbers();
+
+
+
+
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
@@ -57,7 +65,7 @@ const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Finally, log the results.
-console.log(isValid);
+console.log("the final resuls is: ",isValid);
 
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
@@ -99,3 +107,12 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
       console.log(`The Reaminder of Dividing ${nNumbersMultiN3} by ${n4} is: `, resultRemainderN4);
 
 //Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+
+const isnNumberOver25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25 ;
+console.log("Is therer any number over than 25? ", isnNumberOver25);
+
+//If we need to check each number indiviualy, we type:
+console.log (`Is N1 Greater Than 25? The result is: `, n1 > 25);
+console.log (`Is N2 Greater Than 25? The result is: `, n2 > 25);
+console.log (`Is N3 Greater Than 25? The result is: `, n3 > 25);
+console.log (`Is N4 Greater Than 25? The result is: `, n4 > 25);
