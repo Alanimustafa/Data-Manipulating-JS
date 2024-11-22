@@ -70,3 +70,9 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   console.log(`Is ${n3} divided by 5?  Answer: `, n3 % 5 === 0);
   console.log(`Is ${n4} divided by 5?  Answer: `, n4 % 5 === 0);
 
+  //Check if the first number is larger than the last. Cache the result in a variable.
+  console.log(`Is ${n1} greater than ${n4}?  Answer: `, n1 > n4);
+
+
+
+  
