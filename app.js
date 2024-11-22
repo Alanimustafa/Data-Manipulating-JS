@@ -8,9 +8,8 @@ const n4 = 5;
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
 const isSum50 = (n1 + n2 + n3 + n4) == 50;
-console.log (isSum50);
-
-// true
+console.log (`Is the sum of ${n1}, ${n2}, ${n3} and ${n4} equals 50? The answer is: `, isSum50);
+// CONSOLE: true.
 
 
 // Check two: at least two odd numbers
@@ -29,8 +28,20 @@ console.log(`Is ${n4} an odd number? `, n4 %2 == 1);
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
-const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+// const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+
+/* The statement above needs to be changed from (OR) to (AND) to 
+    check if All numbers are less than 25 then the result is TRUE. 
+    Otherwise if there any number is over 25 will still result to false 
+    becuase of using the (OR) condition.*/
+const isOver25 = n1 > 25 && n2 > 25 && n3 > 25 && n4 > 25;
 console.log("Is therer any number over than 25? ", isOver25);
+
+//If we need to check each number indiviualy, we type:
+console.log (`Is N1 Greater Than 25? The result is: `, n1 > 25);
+console.log (`Is N2 Greater Than 25? The result is: `, n2 > 25);
+console.log (`Is N3 Greater Than 25? The result is: `, n3 > 25);
+console.log (`Is N4 Greater Than 25? The result is: `, n4 > 25);
 
 
 // Check four: all unique numbers
@@ -75,14 +86,16 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 //Accomplish the following arithmetic chain:
 
-  //Subtract the first number from the second number.
-  console.log(`Subtract ${n1} from ${n2}. The Result Is: `, n2-n1);
+      //Subtract the first number from the second number.
+      console.log(`Subtract ${n1} from ${n2}. The Result Is: `, n2-n1);
 
-  //Multiply the result by the third number.
-  const nNumbersSum = n1 + n2 + n3 + n4;
-  const nNumbersMultiN3 = nNumbersSum * n3;
-  console.log(`Multipying The result by ${n3} equals to: `, nNumbersMultiN3 );
+      //Multiply the result by the third number.
+      const nNumbersSum = n1 + n2 + n3 + n4;
+      const nNumbersMultiN3 = nNumbersSum * n3;
+      console.log(`Multipying The result by ${n3} equals to: `, nNumbersMultiN3 );
 
-  //Find the remainder of dividing the result by the fourth number.
-  const resultRemainderN4 = nNumbersMultiN3 % n4;
-  console.log(`The Reaminder of Dividing ${nNumbersMultiN3} by ${n4} is: `, resultRemainderN4);
+      //Find the remainder of dividing the result by the fourth number.
+      const resultRemainderN4 = nNumbersMultiN3 % n4;
+      console.log(`The Reaminder of Dividing ${nNumbersMultiN3} by ${n4} is: `, resultRemainderN4);
+
+//Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
