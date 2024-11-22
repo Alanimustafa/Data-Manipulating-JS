@@ -78,4 +78,12 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   //Subtract the first number from the second number.
   console.log(`Subtract ${n1} from ${n2}. The Result Is: `, n2-n1);
 
-  
+
+  //Multiply the result by the third number.
+  const nNumbersSum = n1 + n2 + n3 + n4;
+  const nNumbersMultiN3 = nNumbersSum * n3;
+  console.log(`Multipying The result by ${n3} equals to: `, nNumbersMultiN3 );
+
+  //Find the remainder of dividing the result by the fourth number.
+  const resultRemainderN4 = nNumbersMultiN3 % n4;
+  console.log(`The Reaminder of Dividing ${nNumbersMultiN3} by ${n4} is: `, resultRemainderN4);
