@@ -78,7 +78,6 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   //Subtract the first number from the second number.
   console.log(`Subtract ${n1} from ${n2}. The Result Is: `, n2-n1);
 
-
   //Multiply the result by the third number.
   const nNumbersSum = n1 + n2 + n3 + n4;
   const nNumbersMultiN3 = nNumbersSum * n3;
