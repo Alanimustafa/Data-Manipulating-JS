@@ -1,6 +1,6 @@
 // The initial numbers that must be verified.
-const n1 = 50;
-const n2 = 55;
+const n1 = 10;
+const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
@@ -114,6 +114,7 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 //Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
 
+//Change the Values of N1, N2, N3 and N4 to test the function below.  
 const isnNumberOver25 = [n1, n2, n3, n4];
 let resultOver25 = [];
 
