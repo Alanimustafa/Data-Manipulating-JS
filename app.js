@@ -1,6 +1,6 @@
 // The initial numbers that must be verified.
-const n1 = 10;
-const n2 = 15;
+const n1 = 50;
+const n2 = 55;
 const n3 = 20;
 const n4 = 5;
 
@@ -29,7 +29,7 @@ console.log(`Is ${n4} an odd number? `, n4 %2 == 1);
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
-console.log('is it over? ',isOver25);
+console.log('Is there any number over 25? ',isOver25);
 
 
 
@@ -47,7 +47,7 @@ function equalNumbers () {
             console.log (`The N${index+1} is matched with N${index+2} and the value is ::::::::::::::::::::`, numbersArray[index]);
             console.log (`The N${index+2} is matched with N${index+1} and the value is ::::::::::::::::::::`, numbersArray[index]);
         } else if (numbersArray[index] !== numbersArray[index+1]) {
-          console.log(`N${index+1} HAS NO OTHER DUPLICATES`);
+          console.log(`N${index+1} HAS NO DUPLICATES`);
         }
       }
   } 
@@ -65,7 +65,7 @@ equalNumbers();
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Finally, log the results.
-console.log("the final resuls is: ",isValid);
+console.log("The final resuls is: ",isValid);
 
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
@@ -79,9 +79,12 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 
 
-
+  console.log("------------------------------------------------------------------------------");
 
   // Part 1: Math Problems
+
+  console.log("");
+  console.log(`// Part 1: Math Problems1`);
 
   // Check if all numbers are divisible by 5. Cache the result in a variable.
   console.log(`Is ${n1} divided by 5?  Answer: `, n1 % 5 === 0);
@@ -106,13 +109,35 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
       const resultRemainderN4 = nNumbersMultiN3 % n4;
       console.log(`The Reaminder of Dividing ${nNumbersMultiN3} by ${n4} is: `, resultRemainderN4);
 
+
+
+
 //Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
 
-const isnNumberOver25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25 ;
-console.log("Is therer any number over than 25? ", isnNumberOver25);
+const isnNumberOver25 = [n1, n2, n3, n4];
+let resultOver25 = [];
+
+console.log(isnNumberOver25);
+
+for (let index = 0; index < isnNumberOver25.length; index++) {
+  if (isnNumberOver25[index] > 25) {
+    resultOver25.push(isnNumberOver25[index]);
+    console.log(`The N${index+1} = ${isnNumberOver25[index]} is over 25.`);
+    alert(`The N${index+1} = ${isnNumberOver25[index]} is over 25.`) 
+    console.log(`The number(s) over 25 are: `, resultOver25);    
+  } else if (isnNumberOver25[index] <= 25) {
+    console.log(`N${index+1} is NOT over 25.`)
+  }
+   
+}
+
+/*
+console.log("Is there any number over than 25? ", isnNumberOver25);
 
 //If we need to check each number indiviualy, we type:
 console.log (`Is N1 Greater Than 25? The result is: `, n1 > 25);
 console.log (`Is N2 Greater Than 25? The result is: `, n2 > 25);
 console.log (`Is N3 Greater Than 25? The result is: `, n3 > 25);
 console.log (`Is N4 Greater Than 25? The result is: `, n4 > 25);
+*/
+console.log("------------------------------------------------------------------------------");

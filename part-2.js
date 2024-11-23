@@ -69,6 +69,8 @@ console.log("");
 
 }
 
+console.log("");
+console.log(`Part 2: Practical Math`)
 galonCalculator(55);
 galonCalculator(60);
 galonCalculator(75);
